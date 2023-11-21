@@ -28,13 +28,13 @@ const LoanForm = () => {
   });
 
   useEffect(()=>{
-  
+
     if(id)
     {
       fun(id)
 
     }
-  
+
   },[])
 
 
@@ -43,8 +43,8 @@ const LoanForm = () => {
   {
     const response = await axios.get(`https://8080-dedfbebad306621518acccacedaone.premiumproject.examly.io/api/Loan/${id}`);
       console.log("response.data in edit",response.data);
-    
-    
+
+
     setFormData({
       loanType:response.data.loanType,
       description: response.data.description,
@@ -61,31 +61,31 @@ const LoanForm = () => {
 
   async function handleAddLoan() {
     const fieldErrors = {};
-  
+
     if (!formData.loanType) {
       fieldErrors.loanType = 'Loan Type is required';
     } else {
       fieldErrors.loanType = '';
     }
-  
+
     if (!formData.description) {
       fieldErrors.description = 'Description is required';
     } else {
       fieldErrors.description = '';
     }
-  
+
     if (!formData.interestRate) {
       fieldErrors.interestRate = 'Interest Rate is required';
     } else {
       fieldErrors.interestRate = '';
     }
-  
+
     if (!formData.maxAmount) {
       fieldErrors.maxAmount = 'Maximum Amount is required';
     } else {
       fieldErrors.maxAmount = '';
     }
-  
+
     if (Object.values(fieldErrors).some((error) => error !== '')) {
       // Handle errors
       setErrors(fieldErrors);
@@ -121,11 +121,11 @@ const LoanForm = () => {
       maxAmount: '',
     });
    }catch{
-    
+
    }
     }
   }
-  
+
 
   return (
     <div className="loan-form-container">

@@ -32,12 +32,12 @@ const HomePage = () => {
             if(response.status==204)
             {
                 fun()
-    
+
             }
             closeDeletePopup()
             }
        }catch{
-        
+
        }
     };
 

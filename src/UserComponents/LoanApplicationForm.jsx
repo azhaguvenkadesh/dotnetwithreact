@@ -19,7 +19,7 @@ function LoanApplicationForm() {
   async function handleSubmit() {
     const fieldErrors = {};
 
-  
+
     if (formData.requestedAmount === '') {
       fieldErrors.requestedAmount = 'Requested Amount is required';
     }
@@ -40,7 +40,7 @@ function LoanApplicationForm() {
       fieldErrors.creditScore = 'Credit Score is required';
     }
 
-  
+
     setErrors(fieldErrors);
 
     // Check if there are any errors
@@ -87,7 +87,7 @@ catch{
     }}> Back</button>
       <h2>Loan Application Form</h2>
       <div id="container">
-   
+
         <div>
           <label for="RequestedAmount" >Requested Amount:</label>
           <input
@@ -139,7 +139,7 @@ catch{
         <div>
           <label for="creditScore">Credit Score:</label>
           <input
-          
+
           id="creditScore"
             type="text"
             name="creditScore"
@@ -149,7 +149,7 @@ catch{
           {errors.creditScore && <div className="error">{errors.creditScore}</div>}
         </div>
 
- 
+
 
         <button type="button" className="submit-button" onClick={handleSubmit}>
           Submit

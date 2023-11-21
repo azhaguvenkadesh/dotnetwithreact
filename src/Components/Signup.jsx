@@ -26,7 +26,7 @@ function SignupForm() {
     const fieldErrors = { ...errors };
 
     switch (fieldName) {
-     
+
       case 'password':
         fieldErrors.password = value.length >= 6 ? '' : 'Password must be at least 6 characters';
         break;
@@ -77,7 +77,7 @@ function SignupForm() {
         "role": formData.role
       }
 
-      
+
 
       console.log('requestObject', requestObject);
 
@@ -95,8 +95,8 @@ function SignupForm() {
       } catch (error) {
         setError("Something went wrong, Please try with different data")
       }
-    
-    
+
+
     }
   }
 

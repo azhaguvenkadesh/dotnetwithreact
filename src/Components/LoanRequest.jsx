@@ -9,7 +9,7 @@ const LoanRequests = () => {
 
   // Simulate fetching loan requests from an API
   useEffect(() => {
-    
+
      fun()
   }, []);
 async function fun()
@@ -77,10 +77,10 @@ console.log("response in loan request",response.data)
     fun()
   }
   }catch{
-    
+
   }
   };
-  
+
 
   return (
     <div>
@@ -141,7 +141,7 @@ console.log("response in loan request",response.data)
                     </button>  )}
 
                   </div>
-                
+
               </td>
             </tr>
           ))}

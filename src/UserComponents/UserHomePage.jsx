@@ -35,7 +35,7 @@ const UserHomePage = () => {
 
       }
     }
- 
+
 
 
     const handleApplyClick = (loan) => {
