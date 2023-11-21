@@ -1,0 +1,96 @@
+/* Add styles to format the navigation bar */
+#userNavbar {
+    /* background-color: #333; */
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  
+  /* Add styles to format the filter options */
+  #loanHomeBody {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  /* Style the filter dropdowns */
+  select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style the loan table */
+  .loan-table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .loan-table th, .loan-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Style alternating rows for better readability */
+  .loan-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style the table header row */
+  .loan-table th {
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Style the "Welcome" heading */
+  h1 {
+    color: #333;
+  }
+  
+  /* Style the "Filter by Loan Name" label */
+  label[for="nameFilter"] {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  /* Style the "Filter by Interest Rate" label */
+  label[for="interestRateFilter"] {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  /* Add more CSS styles as needed */
+  #notfound{
+    text-align:center
+  }
+
+  /* Add this to your CSS file */
+.delete-popup {
+    position: fixed; /* or use "absolute" depending on your layout requirements */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the popup */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 999; /* Ensure it's on top of other elements */
+    text-align: center;
+  }
+  
+  /* Style for the buttons in the popup */
+  .delete-popup button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .delete-popup button.cancel {
+    background-color: #ccc;
+  }
+  
