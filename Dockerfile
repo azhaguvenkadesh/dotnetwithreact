@@ -38,10 +38,10 @@ WORKDIR /app
 
 # Copy the backend and frontend build artifacts
 COPY --from=build /app/out .
-COPY --from=build-client /app/client/build ./ClientApp/build
+COPY --from=build-client /app/reactapp/build ./ClientApp/build
 
 # Expose the port that your application will run on
 EXPOSE 80
 
 # Command to run the application
-ENTRYPOINT ["dotnet", "YourWebApplication.dll"]
+ENTRYPOINT ["dotnet", "mywebapp.dll"]
