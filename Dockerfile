@@ -5,7 +5,7 @@ FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /app
 
 # Copy the backend (ASP.NET Core) project files
-COPY ./*.csproj ./
+COPY ./dotnetapp/*.csproj ./
 RUN dotnet restore
 
 # Copy the full backend source code
@@ -18,14 +18,14 @@ RUN dotnet publish -c Release -o out
 FROM node:14 AS build-client
 
 # Set the working directory for the frontend
-WORKDIR /app/client
+WORKDIR /app/reactapp
 
 # Copy the frontend (React) project files
-COPY ./ClientApp/package*.json ./
+COPY ./reactapp/package*.json ./
 RUN npm install
 
 # Copy the full frontend source code
-COPY ./ClientApp .
+COPY ./reactapp .
 
 # Build the frontend
 RUN npm run build
